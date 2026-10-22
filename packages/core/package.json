@@ -1,0 +1,59 @@
+{
+  "name": "@lego/core",
+  "version": "0.0.0",
+  "private": true,
+  "description": "平台无关公共逻辑、客户端状态与服务端状态接入。",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    "./http": {
+      "types": "./dist/http/index.d.ts",
+      "import": "./dist/http/index.js",
+      "default": "./dist/http/index.js"
+    },
+    "./session": {
+      "types": "./dist/session/index.d.ts",
+      "import": "./dist/session/index.js",
+      "default": "./dist/session/index.js"
+    },
+    "./access": {
+      "types": "./dist/access/index.d.ts",
+      "import": "./dist/access/index.js",
+      "default": "./dist/access/index.js"
+    },
+    "./utils": {
+      "types": "./dist/utils/index.d.ts",
+      "import": "./dist/utils/index.js",
+      "default": "./dist/utils/index.js"
+    },
+    "./state": {
+      "types": "./dist/state/index.d.ts",
+      "import": "./dist/state/index.js",
+      "default": "./dist/state/index.js"
+    },
+    "./state/react": {
+      "types": "./dist/state/react/index.d.ts",
+      "import": "./dist/state/react/index.js",
+      "default": "./dist/state/react/index.js"
+    },
+    "./query": {
+      "types": "./dist/query/index.d.ts",
+      "import": "./dist/query/index.js",
+      "default": "./dist/query/index.js"
+    },
+    "./query/react": {
+      "types": "./dist/query/react/index.d.ts",
+      "import": "./dist/query/react/index.js",
+      "default": "./dist/query/react/index.js"
+    }
+  },
+  "sideEffects": false,
+  "scripts": {
+    "build": "node ../../tooling/build/build-package.mjs",
+    "clean": "node ../../tooling/build/clean-package.mjs",
+    "lint": "eslint src --max-warnings 0",
+    "typecheck": "tsc --project tsconfig.json"
+  }
+}

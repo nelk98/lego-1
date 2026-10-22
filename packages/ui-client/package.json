@@ -1,0 +1,39 @@
+{
+  "name": "@lego/ui-client",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Web、Native 与小程序自建基础组件及 SchemaForm 渲染器。",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    "./web": {
+      "types": "./dist/web/index.d.ts",
+      "import": "./dist/web/index.js",
+      "default": "./dist/web/index.js"
+    },
+    "./native": {
+      "types": "./dist/native/index.d.ts",
+      "import": "./dist/native/index.js",
+      "default": "./dist/native/index.js"
+    },
+    "./mini": {
+      "types": "./dist/mini/index.d.ts",
+      "import": "./dist/mini/index.js",
+      "default": "./dist/mini/index.js"
+    },
+    "./web/styles.css": "./dist/web/styles.css",
+    "./mini/styles.css": "./dist/mini/styles.css"
+  },
+  "sideEffects": [
+    "**/*.css",
+    "**/*.scss"
+  ],
+  "scripts": {
+    "build": "node ../../tooling/build/build-package.mjs",
+    "clean": "node ../../tooling/build/clean-package.mjs",
+    "lint": "eslint src --max-warnings 0",
+    "typecheck": "tsc --project tsconfig.json"
+  }
+}

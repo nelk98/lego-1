@@ -1,0 +1,59 @@
+{
+  "name": "@lego/platform",
+  "version": "0.0.0",
+  "private": true,
+  "description": "环境配置、平台能力契约与各运行环境的独立适配入口。",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    "./contracts": {
+      "types": "./dist/contracts/index.d.ts",
+      "import": "./dist/contracts/index.js",
+      "default": "./dist/contracts/index.js"
+    },
+    "./env": {
+      "types": "./dist/env/index.d.ts",
+      "import": "./dist/env/index.js",
+      "default": "./dist/env/index.js"
+    },
+    "./web": {
+      "types": "./dist/web/index.d.ts",
+      "import": "./dist/web/index.js",
+      "default": "./dist/web/index.js"
+    },
+    "./desktop/main": {
+      "types": "./dist/desktop/main/index.d.ts",
+      "import": "./dist/desktop/main/index.js",
+      "default": "./dist/desktop/main/index.js"
+    },
+    "./desktop/preload": {
+      "types": "./dist/desktop/preload/index.d.ts",
+      "import": "./dist/desktop/preload/index.js",
+      "default": "./dist/desktop/preload/index.js"
+    },
+    "./desktop/renderer": {
+      "types": "./dist/desktop/renderer/index.d.ts",
+      "import": "./dist/desktop/renderer/index.js",
+      "default": "./dist/desktop/renderer/index.js"
+    },
+    "./native": {
+      "types": "./dist/native/index.d.ts",
+      "import": "./dist/native/index.js",
+      "default": "./dist/native/index.js"
+    },
+    "./mini": {
+      "types": "./dist/mini/index.d.ts",
+      "import": "./dist/mini/index.js",
+      "default": "./dist/mini/index.js"
+    }
+  },
+  "sideEffects": false,
+  "scripts": {
+    "build": "node ../../tooling/build/build-package.mjs",
+    "clean": "node ../../tooling/build/clean-package.mjs",
+    "lint": "eslint src --max-warnings 0",
+    "typecheck": "tsc --project tsconfig.json"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "name": "@lego/ui-admin",
+  "version": "0.0.0",
+  "private": true,
+  "description": "HeroUI 封装、管理端布局与 SchemaForm 渲染器。",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    "./components": {
+      "types": "./dist/components/index.d.ts",
+      "import": "./dist/components/index.js",
+      "default": "./dist/components/index.js"
+    },
+    "./layouts": {
+      "types": "./dist/layouts/index.d.ts",
+      "import": "./dist/layouts/index.js",
+      "default": "./dist/layouts/index.js"
+    },
+    "./schema-form": {
+      "types": "./dist/schema-form/index.d.ts",
+      "import": "./dist/schema-form/index.js",
+      "default": "./dist/schema-form/index.js"
+    },
+    "./styles.css": "./dist/styles.css"
+  },
+  "sideEffects": [
+    "**/*.css",
+    "**/*.scss"
+  ],
+  "scripts": {
+    "build": "node ../../tooling/build/build-package.mjs",
+    "clean": "node ../../tooling/build/clean-package.mjs",
+    "lint": "eslint src --max-warnings 0",
+    "typecheck": "tsc --project tsconfig.json"
+  }
+}

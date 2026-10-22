@@ -1,0 +1,8 @@
+{
+  "extends": "../../tooling/typescript/base.json",
+  "compilerOptions": {
+    "noEmit": true,
+    "types": ["node"]
+  },
+  "include": ["vite.config.ts", "uno.config.ts"]
+}

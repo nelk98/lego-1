@@ -1,0 +1,34 @@
+{
+  "name": "@lego/schema-form",
+  "version": "0.0.0",
+  "private": true,
+  "description": "无 UI 的 SchemaForm 内核、React 绑定与校验接入。",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    "./core": {
+      "types": "./dist/core/index.d.ts",
+      "import": "./dist/core/index.js",
+      "default": "./dist/core/index.js"
+    },
+    "./react": {
+      "types": "./dist/react/index.d.ts",
+      "import": "./dist/react/index.js",
+      "default": "./dist/react/index.js"
+    },
+    "./validators": {
+      "types": "./dist/validators/index.d.ts",
+      "import": "./dist/validators/index.js",
+      "default": "./dist/validators/index.js"
+    }
+  },
+  "sideEffects": false,
+  "scripts": {
+    "build": "node ../../tooling/build/build-package.mjs",
+    "clean": "node ../../tooling/build/clean-package.mjs",
+    "lint": "eslint src --max-warnings 0",
+    "typecheck": "tsc --project tsconfig.json"
+  }
+}

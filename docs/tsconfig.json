@@ -1,9 +1,0 @@
-{
-  "extends": "../tsconfig.base.json",
-  "compilerOptions": {
-    "jsx": "preserve",
-    "jsxImportSource": "vue",
-    "types": ["vitepress/client"]
-  },
-  "include": [".vitepress/**/*.ts", "preset/**/*.ts"]
-}

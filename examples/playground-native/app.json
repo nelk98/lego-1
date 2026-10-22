@@ -1,0 +1,17 @@
+{
+  "expo": {
+    "name": "拾物 · Lego Native",
+    "slug": "lego-playground-native",
+    "version": "0.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "automatic",
+    "platforms": ["ios", "android"],
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "dev.lego.playground"
+    },
+    "android": {
+      "package": "dev.lego.playground"
+    }
+  }
+}

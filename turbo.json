@@ -1,0 +1,42 @@
+{
+  "$schema": "https://turborepo.dev/schema.json",
+  "globalDependencies": [
+    "tooling/**",
+    "patches/**",
+    "tsconfig.json",
+    "eslint.config.mjs",
+    "prettier.config.mjs",
+    ".node-version",
+    ".npmrc"
+  ],
+  "globalEnv": [
+    "NODE_ENV",
+    "LEGO_BUILD_TARGET",
+    "LEGO_BUILD_MODE",
+    "LEGO_APP_ENV",
+    "LEGO_PLATFORM",
+    "LEGO_FEATURE_*",
+    "LEGO_PUBLIC_*"
+  ],
+  "tasks": {
+    "dev": {
+      "dependsOn": ["^build"],
+      "cache": false,
+      "persistent": true
+    },
+    "build": {
+      "dependsOn": ["^build"],
+      "outputs": ["dist/**"]
+    },
+    "typecheck": {
+      "dependsOn": ["^build"],
+      "outputs": []
+    },
+    "lint": {
+      "outputs": []
+    },
+    "clean": {
+      "cache": false
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "name": "@lego/playground-mini",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "taro build --type weapp --watch",
+    "build": "taro build --type weapp",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint . --max-warnings 0",
+    "clean": "node -e \"require('node:fs').rmSync('dist', { recursive: true, force: true })\""
+  },
+  "dependencies": {
+    "@babel/runtime": "7.28.4",
+    "@tarojs/components": "4.3.0",
+    "@tarojs/helper": "4.3.0",
+    "@tarojs/react": "4.3.0",
+    "@tarojs/runtime": "4.3.0",
+    "@tarojs/shared": "4.3.0",
+    "@tarojs/taro": "4.3.0",
+    "react": "18.3.1"
+  },
+  "devDependencies": {
+    "@babel/core": "7.28.0",
+    "@babel/preset-react": "7.27.1",
+    "@tarojs/cli": "4.3.0",
+    "@tarojs/plugin-framework-react": "4.3.0",
+    "@tarojs/plugin-platform-weapp": "4.3.0",
+    "@tarojs/service": "4.3.0",
+    "@tarojs/webpack5-runner": "4.3.0",
+    "@types/node": "22.20.5",
+    "@types/react": "18.3.27",
+    "babel-preset-taro": "4.3.0",
+    "less": "4.9.1",
+    "postcss": "8.5.6",
+    "sass": "1.106.1",
+    "stylus": "0.64.0",
+    "typescript": "5.9.3",
+    "webpack": "5.91.0"
+  }
+}

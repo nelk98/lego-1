@@ -1,0 +1,19 @@
+@import 'tailwindcss' source(none);
+@import '@heroui/styles';
+@source './';
+
+:root {
+  --background: var(--demo-bg);
+  --foreground: var(--demo-text);
+  --surface: var(--demo-surface);
+  --surface-foreground: var(--demo-text);
+  --field-background: var(--demo-surface);
+  --field-foreground: var(--demo-text);
+  --accent: #356b50;
+  --accent-foreground: #ffffff;
+}
+
+:root.dark {
+  --accent: #91c8a3;
+  --accent-foreground: #17281e;
+}

@@ -1,0 +1,53 @@
+{
+  "name": "@lego/styles",
+  "version": "0.0.0",
+  "private": true,
+  "description": "共享设计 token、深浅主题、品牌状态色及各端样式适配。",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    "./tokens": {
+      "types": "./dist/tokens/index.d.ts",
+      "import": "./dist/tokens/index.js",
+      "default": "./dist/tokens/index.js"
+    },
+    "./runtime": {
+      "types": "./dist/runtime/index.d.ts",
+      "import": "./dist/runtime/index.js",
+      "default": "./dist/runtime/index.js"
+    },
+    "./adapters/heroui": {
+      "types": "./dist/adapters/heroui/index.d.ts",
+      "import": "./dist/adapters/heroui/index.js",
+      "default": "./dist/adapters/heroui/index.js"
+    },
+    "./adapters/tailwind": {
+      "types": "./dist/adapters/tailwind/index.d.ts",
+      "import": "./dist/adapters/tailwind/index.js",
+      "default": "./dist/adapters/tailwind/index.js"
+    },
+    "./adapters/unocss": {
+      "types": "./dist/adapters/unocss/index.d.ts",
+      "import": "./dist/adapters/unocss/index.js",
+      "default": "./dist/adapters/unocss/index.js"
+    },
+    "./adapters/native": {
+      "types": "./dist/adapters/native/index.d.ts",
+      "import": "./dist/adapters/native/index.js",
+      "default": "./dist/adapters/native/index.js"
+    },
+    "./styles.css": "./dist/styles.css"
+  },
+  "sideEffects": [
+    "**/*.css",
+    "**/*.scss"
+  ],
+  "scripts": {
+    "build": "node ../../tooling/build/build-package.mjs",
+    "clean": "node ../../tooling/build/clean-package.mjs",
+    "lint": "eslint src --max-warnings 0",
+    "typecheck": "tsc --project tsconfig.json"
+  }
+}
