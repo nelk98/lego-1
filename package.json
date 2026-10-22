@@ -44,8 +44,98 @@
     "typescript-eslint": "8.72.0"
   },
   "pnpm": {
+    "packageExtensions": {
+      "@heroui/react@3.2.6": {
+        "peerDependencies": {
+          "@types/react": ">=19.0.0"
+        },
+        "peerDependenciesMeta": {
+          "@types/react": {
+            "optional": true
+          }
+        }
+      },
+      "react-aria-components@1.22.1": {
+        "peerDependencies": {
+          "@types/react": "*"
+        },
+        "peerDependenciesMeta": {
+          "@types/react": {
+            "optional": true
+          }
+        }
+      },
+      "react-aria@3.53.1": {
+        "peerDependencies": {
+          "@types/react": "*"
+        },
+        "peerDependenciesMeta": {
+          "@types/react": {
+            "optional": true
+          }
+        }
+      },
+      "@react-types/shared@3.37.0": {
+        "peerDependencies": {
+          "@types/react": "*"
+        },
+        "peerDependenciesMeta": {
+          "@types/react": {
+            "optional": true
+          }
+        }
+      },
+      "react-stately@3.51.0": {
+        "peerDependencies": {
+          "@types/react": "*"
+        },
+        "peerDependenciesMeta": {
+          "@types/react": {
+            "optional": true
+          }
+        }
+      },
+      "input-otp@1.5.0": {
+        "peerDependencies": {
+          "@types/react": "*"
+        },
+        "peerDependenciesMeta": {
+          "@types/react": {
+            "optional": true
+          }
+        }
+      },
+      "@react-types/shared@3.36.1": {
+        "peerDependencies": {
+          "@types/react": "*"
+        },
+        "peerDependenciesMeta": {
+          "@types/react": {
+            "optional": true
+          }
+        }
+      },
+      "@adobe/react-spectrum@3.47.7": {
+        "peerDependencies": {
+          "@types/react": "*"
+        },
+        "peerDependenciesMeta": {
+          "@types/react": {
+            "optional": true
+          }
+        }
+      },
+      "babel-plugin-react-compiler@1.0.0": {
+        "dependencies": {
+          "@types/babel__core": "7.20.5",
+          "@types/babel__traverse": "7.28.0",
+          "zod": "4.6.7"
+        }
+      }
+    },
     "patchedDependencies": {
-      "unconfig@7.5.0": "patches/unconfig@7.5.0.patch"
+      "unconfig@7.5.0": "patches/unconfig@7.5.0.patch",
+      "babel-plugin-react-compiler@1.0.0": "patches/babel-plugin-react-compiler@1.0.0.patch"
     },
     "overrides": {
       "schema-utils@^4": "4.7.0"

@@ -10,4 +10,5 @@ coverage/
 !.env.example
 *.log
 .expo/
+.swc/
 project.private.config.json

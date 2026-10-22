@@ -57,6 +57,10 @@ pnpm preview:playground
 
 Playground 保持 TypeScript `strict` 和完整声明检查；由于当前 HeroUI / React Aria 声明的可选属性不兼容 `exactOptionalPropertyTypes`，仅在此应用关闭该额外选项。六个公共包仍使用原有严格配置，未开启 `skipLibCheck`。
 
+根 `package.json` 的 `pnpm.packageExtensions` 为当前 HeroUI、React Aria / Spectrum、React Stately、React Types Shared 与 input-otp 补充缺失的可选 `@types/react` peer。这样 Web 使用本工作区的 React 19 类型，小程序仍使用其 React 18 类型，避免第三方声明从提升目录意外取到另一端的类型。扩展限定到当前版本，升级对应依赖时应重新检查并移除已由上游修复的条目。
+
+Vite React 插件的可选类型引用还会解析 Native 工具链安装的 `babel-plugin-react-compiler@1.0.0`。该版本的声明引用了未声明的 Babel 类型与 Zod 4，因此通过同一 `packageExtensions` 补齐；`patches/babel-plugin-react-compiler@1.0.0.patch` 仅显式导入 `node:perf_hooks` 的 `PerformanceMeasure` 类型。此修复不修改编译器运行时代码，也不在 Web 启用 React Compiler。完整声明检查用于持续验证这些兼容补丁。
+
 1. 在公共包实现能力并声明实际依赖，维护 `exports` 和 `sideEffects`。
 2. 在对应页面通过公开子路径接入最小可交互示例。
 3. 覆盖基本状态、异常状态和键盘操作；主题与组件接入后再添加视觉回归。
